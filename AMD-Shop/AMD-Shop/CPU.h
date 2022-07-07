@@ -20,8 +20,6 @@ public:
 		m_socket = socket;
 	}
 
-	~CPU();
-
 	void showCPU() {
 		cout << "AMD " << m_modelProcessor << " , " << m_numberCores << " Cores, " << m_numberThreads << " Threads, " << " " << m_socket << " socket, " << endl;
 		Product::showProduct();

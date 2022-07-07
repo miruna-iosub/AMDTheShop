@@ -12,7 +12,6 @@ public:
 		GPU(weight, height, TDP, nms, frequency, modelGraphics, maxResolution, TechVersion) {
 
 	}
-	~APU();
 
 	void showAPU() {
 		CPU::showCPU();

@@ -145,7 +145,11 @@
     <ClInclude Include="APU.h" />
     <ClInclude Include="CPU.h" />
     <ClInclude Include="GPU.h" />
+    <ClInclude Include="Login.h" />
     <ClInclude Include="Product.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="logindata.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

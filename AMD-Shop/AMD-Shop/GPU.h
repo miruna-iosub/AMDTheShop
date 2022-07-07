@@ -17,10 +17,10 @@ public:
 		m_modelGraphics = modelGraphics;
 	}
 
-	~GPU();
 	void showGPU() {
 		cout << m_modelGraphics << ", " << m_TechVersion << ", " << m_maxResolution << "k Resolution" << endl;
 	}
+
 	void showGPUProduct() {
 		cout << m_modelGraphics << ", " << m_TechVersion << ", " << m_maxResolution << "k Resolution" << endl;
 		Product::showProduct();
