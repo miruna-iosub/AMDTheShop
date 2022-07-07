@@ -19,7 +19,6 @@ public:
 		m_nms = nms;
 		m_frequency = frequency;
 	}
-
 	void showProduct() {
 		cout << m_weight << " lbs, " << m_height << " inches, " << m_nms << " nm, " << m_frequency << " GHz, " << m_TDP << " W, " << endl;
 	}
