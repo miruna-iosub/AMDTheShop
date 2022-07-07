@@ -146,7 +146,6 @@
     <ClInclude Include="CPU.h" />
     <ClInclude Include="GPU.h" />
     <ClInclude Include="Login.h" />
-    <ClInclude Include="Menu.h" />
     <ClInclude Include="Product.h" />
     <ClInclude Include="User.h" />
   </ItemGroup>
