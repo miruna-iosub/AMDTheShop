@@ -7,51 +7,65 @@ using namespace std;
 class Login
 {
 protected:
-    char username[50];
-    char password[50];
+    string username;
+    string password;
     unsigned int role;
+    unsigned int id;
 public:
 
-    void login(char  un[], char pw[])
+    void login(string  un, string pw)
     {
         ifstream fs("logindata.txt", ios::in);
         while (!fs.eof())
         {
             fs >> username >> password >> role;
-
-            if (strcmp(un, this->username) == 0 && strcmp(pw, this->password) == 0){
+           
+            if (username == un && password == pw) {
+            //if (strcmp(un, this->username) == 0 && strcmp(pw, this->password) == 0){
                 if (role == 1)
                  {
-                     cout << "Welcome to student : " << username << endl;
+                     cout << "Welcome to client : " << username << endl;
                      break;
                  }
                  else if (role == 2)
                  {
                      cout << "Welcome to admin : " << username;
-                     break;
+                     
                  }
              }
-             else
-                 cout << "Acces denied.";
         }
         fs.close();
     }
 
-    int getRoleIfLogin(char  un[], char pw[]) {
+    string getRoleIfLogin(string  un, string pw) {
         ifstream fs("logindata.txt", ios::in);
         while (!fs.eof())
         {
             fs >> username >> password >> role;
-
-            if (strcmp(un, this->username) == 0 && strcmp(pw, this->password) == 0) {
+            if (username == un && password == pw) {
+            //if (strcmp(un, this->username) == 0 && strcmp(pw, this->password) == 0) {
                 if (role == 1)
                 {
-                    return 1;
+                    return "client";
                 }
                 else if (role == 2)
                 {
-                    return 2;
+                    return "administrator";
                 }
+            }
+        }
+        fs.close();
+    }
+
+    string getUsernameIfLogin(string  un, string pw) {
+        ifstream fs("logindata.txt", ios::in);
+        while (!fs.eof())
+        {
+            fs >> username >> password >> role;
+            
+            if (username == un && password == pw) {
+            //if (strcmp(un, this->username) == 0 && strcmp(pw, this->password) == 0) {
+                return username;
             }
         }
         fs.close();
