@@ -1,5 +1,3 @@
-#define _CRT_SECURE_NO_WARNINGS
-#define _CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES 1
 #include <iostream>
 #include <string>
 #include "product.h"
