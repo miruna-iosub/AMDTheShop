@@ -19,22 +19,40 @@ public:
         {
             fs >> username >> password >> role;
 
-            if (strcmp(un, this->username) == 0 && strcmp(pw, this->password) == 0)
-            {
+            if (strcmp(un, this->username) == 0 && strcmp(pw, this->password) == 0){
+                if (role == 1)
+                 {
+                     cout << "Welcome to student : " << username << endl;
+                     break;
+                 }
+                 else if (role == 2)
+                 {
+                     cout << "Welcome to admin : " << username;
+                     break;
+                 }
+             }
+             else
+                 cout << "Acces denied.";
+        }
+        fs.close();
+    }
+
+    int getRoleIfLogin(char  un[], char pw[]) {
+        ifstream fs("logindata.txt", ios::in);
+        while (!fs.eof())
+        {
+            fs >> username >> password >> role;
+
+            if (strcmp(un, this->username) == 0 && strcmp(pw, this->password) == 0) {
                 if (role == 1)
                 {
-                    cout << "Welcome to student : " << username << endl;
-                    break;
+                    return 1;
                 }
                 else if (role == 2)
                 {
-                    cout << "Welcome to admin : " << username;
-                    break;
+                    return 2;
                 }
             }
-            else
-                cout << "Acces denied.";
-
         }
         fs.close();
     }

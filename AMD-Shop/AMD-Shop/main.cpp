@@ -26,9 +26,9 @@ int main()
     {
         system("cls");
         char username[50], password[50];
-        int ch;
+        int ch, role;
         cout << " ********  Welcome  *********";
-        cout << "\n 1. Login \n 2. Register \n 3. Exit" << endl;
+        cout << "\n 1. Login \n 2. Register \n 3. Role \n 4. Exit" << endl;
         cout << "Enter choice: ";
         cin >> ch;
         switch (ch)
@@ -42,6 +42,13 @@ int main()
             l1.Register();
             break;
         case 3:
+            cout << " Username : "; cin >> username;
+            cout << " Password : "; cin >> password;
+            if (l1.getRoleIfLogin(username, password) == 1)
+                cout << "Este client";
+            else
+                cout << "Este administrator.";
+        case 4:
             break;
         }
         getchar();
