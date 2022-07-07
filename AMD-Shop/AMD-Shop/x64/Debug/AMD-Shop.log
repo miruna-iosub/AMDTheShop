@@ -1,0 +1,4 @@
+﻿  main.cpp
+main.obj : error LNK2019: unresolved external symbol "public: __cdecl CPU::~CPU(void)" (??1CPU@@QEAA@XZ) referenced in function "int `public: __cdecl APU::APU(double,double,int,int,double,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,int,double,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,int,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)'::`1'::dtor$6" (?dtor$6@?0???0APU@@QEAA@NNHHNV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@HN00H0@Z@4HA)
+main.obj : error LNK2019: unresolved external symbol "public: __cdecl APU::~APU(void)" (??1APU@@QEAA@XZ) referenced in function main
+C:\Users\Miruna\Desktop\AMD-Shop\AMD-Shop\x64\Debug\AMD-Shop.exe : fatal error LNK1120: 2 unresolved externals
