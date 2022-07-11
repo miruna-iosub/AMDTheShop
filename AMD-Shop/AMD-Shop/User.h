@@ -30,7 +30,7 @@ public:
     virtual void addProduct(Product* p) = 0;
     virtual void deleteProduct(Product* p) = 0;
     virtual void chooseProduct() = 0;
-};
+}; 
 
 class Administrator : public User
 {
