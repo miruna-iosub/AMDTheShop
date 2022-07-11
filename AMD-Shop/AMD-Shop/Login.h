@@ -5,14 +5,13 @@
 #include <string.h>
 using namespace std;
 class Login
-{
+{ 
 protected: 
     string username;
     string password;
     unsigned int role;
-    unsigned int id;
+    unsigned int id; 
 public:
-
     void login(string  un, string pw)
     {
         ifstream fs("logindata.txt", ios::in);
