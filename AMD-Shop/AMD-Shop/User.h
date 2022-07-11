@@ -32,11 +32,11 @@ public:
     virtual void chooseProduct() = 0;
 }; 
 
-class Administrator : public User
+class Administrator : public User   
 {
 public:
     Administrator() {
-        role = "administrator";
+        role = "administrator ";
     }
     Administrator(string username, string password, string role);
 
