@@ -20,7 +20,7 @@ public:
 	  
 	int getThreads() override {
 		return this->threads;
-	}
+	} 
 	void setThreads(int threads) override {
 		this->threads = threads;
 	}
@@ -28,14 +28,14 @@ public:
 	string getSocket() override {
 		return this->socket;
 	}
-	void setSocket(std::string socket) override {
+	void setSocket(string socket) override {
 		this->socket = socket;
 	}
 
 	string getMaxRes() override {
 		return this->maxRes;
 	}
-	void setMaxRes(std::string maxRes) override {
+	void setMaxRes(string maxRes) override {
 		this->maxRes = maxRes;
 	}
 
