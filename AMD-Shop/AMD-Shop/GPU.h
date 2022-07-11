@@ -13,7 +13,7 @@ protected:
 
 public:
 	GPU(){}
-	GPU(string maxRes, Technology tech, string name = "", float weight = 0.0, int height = 0, int TDP = 0, int nms = 0, int memory = 0, float frequency = 0) {
+	GPU(string maxRes, Technology tech, string name = "", float weight = 0, int height = 0, int TDP = 0, int nms = 0, int memory = 0, float frequency = 0) {
 
 		this->maxRes = maxRes;
 		this->tech = tech;
@@ -32,10 +32,10 @@ public:
 	string getSocket() override{}
 	void setSocket(string socket) override;
 
-	std::string getMaxRes() override {
+	string getMaxRes() override {
 		return this->maxRes;
 	}
-	void setMaxRes(std::string maxRes) override {
+	void setMaxRes(string maxRes) override {
 
 		this->maxRes = maxRes;
 	}
