@@ -6,7 +6,7 @@
 using namespace std;
 class Login
 {
-protected:
+protected: 
     string username;
     string password;
     unsigned int role;
@@ -21,7 +21,6 @@ public:
             fs >> username >> password >> role;
            
             if (username == un && password == pw) {
-            //if (strcmp(un, this->username) == 0 && strcmp(pw, this->password) == 0){
                 if (role == 1)
                  {
                      cout << "Welcome to client : " << username << endl;
@@ -43,7 +42,6 @@ public:
         {
             fs >> username >> password >> role;
             if (username == un && password == pw) {
-            //if (strcmp(un, this->username) == 0 && strcmp(pw, this->password) == 0) {
                 if (role == 1)
                 {
                     return "client";
@@ -64,7 +62,6 @@ public:
             fs >> username >> password >> role;
             
             if (username == un && password == pw) {
-            //if (strcmp(un, this->username) == 0 && strcmp(pw, this->password) == 0) {
                 return username;
             }
         }
