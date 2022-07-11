@@ -1,3 +1,8 @@
 ﻿  main.cpp
-C:\Users\Miruna\Desktop\AMD-Shop\AMD-Shop\AMD-Shop\main.cpp(29,17): warning C4101: 'role': unreferenced local variable
-  AMD-Shop.vcxproj -> C:\Users\Miruna\Desktop\AMD-Shop\AMD-Shop\x64\Debug\AMD-Shop.exe
+C:\Users\Miruna\Desktop\AMD-Shop\AMD-Shop\AMD-Shop\GPU.h(55,1): error C2660: 'Product::setWeight': function does not take 0 arguments
+C:\Users\Miruna\Desktop\AMD-Shop\AMD-Shop\AMD-Shop\product.h(134,7): message : see declaration of 'Product::setWeight'
+C:\Users\Miruna\Desktop\AMD-Shop\AMD-Shop\AMD-Shop\APU.h(23,23): error C2504: 'CPU': base class undefined
+C:\Users\Miruna\Desktop\AMD-Shop\AMD-Shop\AMD-Shop\APU.h(26,1): error C2660: 'Product::setWeight': function does not take 0 arguments
+C:\Users\Miruna\Desktop\AMD-Shop\AMD-Shop\AMD-Shop\product.h(134,7): message : see declaration of 'Product::setWeight'
+C:\Users\Miruna\Desktop\AMD-Shop\AMD-Shop\AMD-Shop\APU.h(27,3): error C3861: 'setCore': identifier not found
+C:\Users\Miruna\Desktop\AMD-Shop\AMD-Shop\AMD-Shop\main.cpp(24): fatal error C1075: '{': no matching token found

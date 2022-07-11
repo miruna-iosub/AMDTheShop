@@ -25,7 +25,7 @@ public:
     User(string username, string password, string role) {
         this->username = username;
         this->password = password;
-        this->role = role;
+        this->role = role; 
     }
     virtual void addProduct(Product* p) = 0;
     virtual void deleteProduct(Product* p) = 0;
