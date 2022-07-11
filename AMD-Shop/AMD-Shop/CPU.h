@@ -41,6 +41,7 @@ public:
 	}
 
 	string getMaxRes() override;
+
 	void setMaxRes(string maxRes) override;
 
 	Technology getTech() override {

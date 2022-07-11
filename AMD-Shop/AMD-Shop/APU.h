@@ -11,10 +11,11 @@ public:
 	APU(string name, float weight, int height, int TDP, int nms, int memory, float frequency, int cores, int threads, string socket, string maxRes, Technology tech);
 
 	int getCores() override {
-		return this->cores;
+		return this->cores; 
 	}
+
 	void setCores(int cores) override {
-		this->cores = cores;
+		this->cores = cores; 
 	}
 	  
 	int getThreads() override {
@@ -24,7 +25,7 @@ public:
 		this->threads = threads;
 	}
 
-	std::string getSocket() override {
+	string getSocket() override {
 		return this->socket;
 	}
 	void setSocket(std::string socket) override {
@@ -45,7 +46,7 @@ public:
 		this->tech = tech;
 	}
 
-	std::string getType() override {
+	string getType() override {
 		return typeid(*this).name();
 	}
 };
