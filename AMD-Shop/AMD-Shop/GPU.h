@@ -3,26 +3,51 @@
 #include <iostream>
 #include <string>
 using namespace std;
-class GPU :public Product {
+
+
+class GPU : virtual public Product
+{
 protected:
-	string m_modelGraphics;
-	int m_maxResolution;
-	string m_TechVersion;
+	std::string maxRes;
+	Technology tech;
+
 public:
-	GPU() :Product() {}
+	GPU(){}
+	GPU(string maxRes, Technology tech, string name = "", float weight = 0.0, int height = 0, int TDP = 0, int nms = 0, int memory = 0, float frequency = 0) {
 
-	GPU(double weight, double height, int TDP, int nms, double frequency, string modelGraphics, int maxResolution, string TechVersion) :Product(weight, height, TDP, nms, frequency) {
-		m_maxResolution = maxResolution;
-		m_TechVersion = TechVersion;
-		m_modelGraphics = modelGraphics;
+		this->maxRes = maxRes;
+		this->tech = tech;
+	}
+	int getCores() override {
+		return 0;
+	}
+	void setCores(int cores) override{}
+
+	int getThreads() override {
+		return 0;
+	}              
+	void setThreads(int threads) override {
 	}
 
-	void showGPU() {
-		cout << m_modelGraphics << ", " << m_TechVersion << ", " << m_maxResolution << "k Resolution" << endl;
+	string getSocket() override{}
+	void setSocket(string socket) override;
+
+	std::string getMaxRes() override {
+		return this->maxRes;
+	}
+	void setMaxRes(std::string maxRes) override {
+
+		this->maxRes = maxRes;
 	}
 
-	void showGPUProduct() {
-		cout << m_modelGraphics << ", " << m_TechVersion << ", " << m_maxResolution << "k Resolution" << endl;
-		Product::showProduct();
+	Technology getTech() override {
+		return this->tech;
+	}
+	void setTech(Technology tech) override {
+		this->tech = tech;
+	}
+
+	string getType() override {
+		return typeid(*this).name();
 	}
 };

@@ -2,19 +2,52 @@
 #pragma once
 #include"CPU.h"
 #include"GPU.h"
+using namespace std;
 
-class APU : public CPU, public GPU {
-
+class APU : public CPU, public GPU
+{
 public:
-	APU() :CPU(), GPU() {}
-	APU(double weight, double height, int TDP, int nms, double frequency, string modelProcessor, int numberCores, double numberThreads, string socket, string modelGraphics, int maxResolution, string TechVersion) :
-		CPU(weight, height, TDP, nms, frequency, modelProcessor, numberCores, numberThreads, socket),
-		GPU(weight, height, TDP, nms, frequency, modelGraphics, maxResolution, TechVersion) {
+	APU();
+	APU(string name, float weight, int height, int TDP, int nms, int memory, float frequency, int cores, int threads, string socket, string maxRes, Technology tech);
 
+	int getCores() override {
+		return this->cores;
+	}
+	void setCores(int cores) override {
+		this->cores = cores;
+	}
+	  
+	int getThreads() override {
+		return this->threads;
+	}
+	void setThreads(int threads) override {
+		this->threads = threads;
 	}
 
-	void showAPU() {
-		CPU::showCPU();
-		GPU::showGPU();
+	std::string getSocket() override {
+		return this->socket;
+	}
+	void setSocket(std::string socket) override {
+		this->socket = socket;
+	}
+
+	string getMaxRes() override {
+		return this->maxRes;
+	}
+	void setMaxRes(std::string maxRes) override {
+		this->maxRes = maxRes;
+	}
+
+	Technology getTech() override {
+		return this->tech;
+	}
+	void setTech(Technology tech) override {
+		this->tech = tech;
+	}
+
+	std::string getType() override {
+		return typeid(*this).name();
 	}
 };
+
+
