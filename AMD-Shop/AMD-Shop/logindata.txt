@@ -1,5 +1,3 @@
 miruna test1 1 
 miru test2 1 
-elena poo 2  
-miru pass 1 
-m s 1 
+  
