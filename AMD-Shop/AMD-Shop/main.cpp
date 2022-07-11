@@ -34,7 +34,7 @@ int main()
         cin >> ch;
         switch (ch)
         {
-        case 1:
+        case 1: 
             cout << " Username : "; cin >> username;
             cout << " Password : "; cin >> password;
             l1.login(username, password);
