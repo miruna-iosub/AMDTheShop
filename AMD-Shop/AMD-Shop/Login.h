@@ -12,9 +12,9 @@ protected:
     unsigned int role;
     unsigned int id; 
 public:
-    void login(string  un, string pw)
-    {
-        ifstream fs("logindata.txt", ios::in);
+    void login(string  un, string pw) 
+    { 
+        ifstream fs("logindata.txt", ios::in);   
         while (!fs.eof())
         {
             fs >> username >> password >> role;
