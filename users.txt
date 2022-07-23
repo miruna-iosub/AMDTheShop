@@ -1,4 +1,0 @@
-1 miru test 0
-2 miruna test1 0
-3 elena test2 0
-1 miruna test3 0
